@@ -1,0 +1,26 @@
+{
+  "name": "bg-canvases",
+  "version": "1.0.0",
+  "description": "Tool for creating animated backgrounds on HTML5 canvases.",
+  "main": "./src/Background.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "canvas",
+    "ctx",
+    "background",
+    "figures",
+    "animation"
+  ],
+  "author": "belousnikita",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^5.13.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.11"
+  }
+}
