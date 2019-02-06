@@ -6,7 +6,7 @@ Tool for creating animated backgrounds on HTML 5 canvases.
 
    1.1 [Installation](#Installation)
    
-   1.2 [Basic HTML with HTML5 Canvases](#Basic_HTML_with_HTML5_Canvases)
+   1.2 [Basic HTML with HTML5 Canvases](#Basic-HTML-with-HTML5-Canvases)
    
    1.3 [Figures](#Figures)
 
