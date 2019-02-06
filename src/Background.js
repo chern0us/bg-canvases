@@ -58,12 +58,14 @@ export default class Background {
 
   // Set animation for layer
   setAnimation(layerId, animation) {
+    // TODO add possibility to setAnimation to all layers
     this.layers[layerId].setAnimation(animation);
     return this;
   }
 
   // Calls animation function for every layer
-  animate() {
+  animate(layerId) {
+    if (layerId) { this.layers[layerId].animate(); return this; }
     forEach(this.layers, (layer) => {
       if (layer.active) layer.animate();
     });
@@ -92,17 +94,58 @@ export default class Background {
   // Draw frame from rendered
   drawFrame(frame) {
     const buffers = this.rendered;
-
-
     const cleared = new Set();
     forEach(buffers, stock => reDraw(cleared, stock[frame]));
     return this;
   }
 
   // Draw every layer
-  draw() {
+  draw(layerId) {
     const cleared = new Set();
+    if (layerId) { reDraw(cleared, this.layers[layerId]); return this; }
     forEach(this.layers, layer => reDraw(cleared, layer));
+    return this;
+  }
+
+  // Hide all or layer with id
+  hide(layerId) {
+    if (layerId) { this.layers[layerId].hide(); return this; }
+    forEach(this.layers, l => l.hide());
+    return this;
+  }
+
+  // Show all or layer with id
+  show(layerId) {
+    if (layerId) { this.layers[layerId].show(); return this; }
+    forEach(this.layers, l => l.show());
+    return this;
+  }
+
+  // Activate all or layer with id
+  start(layerId) {
+    if (layerId) { this.layers[layerId].start(); return this; }
+    forEach(this.layers, l => l.start());
+    return this;
+  }
+
+  // Deactivate all or layer with id
+  stop(layerId) {
+    if (layerId) { this.layers[layerId].stop(); return this; }
+    forEach(this.layers, l => l.stop());
+    return this;
+  }
+
+  // Apply function to all figures an all layers or layer with Id;
+  apply(func, layerId) {
+    if (layerId) { this.layers[layerId].apply(func); return this; }
+    forEach(this.layers, l => l.apply(func));
+    return this;
+  }
+
+  // Apply function to each figures an all layers or layer with Id;
+  applyOnEach(func, layerId) {
+    if (layerId) { this.layers[layerId].applyOnEach(func); return this; }
+    forEach(this.layers, l => l.applyOnEach(func));
     return this;
   }
 }

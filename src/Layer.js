@@ -1,6 +1,7 @@
 // Useful functions from Lodash
 import forEach from 'lodash/forEach';
 import cloneDeep from 'lodash/cloneDeep';
+// import omit from 'lodash/omit';
 
 // Export class
 export default class Layer {
@@ -42,8 +43,10 @@ export default class Layer {
 
   // Call animation finction
   animate() {
-    const { ctx, figures, animation } = this;
-    animation(ctx, figures);
+    const {
+      ctx, figures, animation, id,
+    } = this;
+    forEach(figures, f => animation(f, figures, ctx, id));
     return this;
   }
 
@@ -54,7 +57,10 @@ export default class Layer {
 
   // Applying function to all figures
   apply(func) {
-    func(this.figures);
+    const {
+      ctx, figures, id,
+    } = this;
+    func(figures, ctx, id);
   }
 
   // Draw layer
@@ -123,8 +129,6 @@ export default class Layer {
   // Clear canvas
   clear() {
     const { ctx } = this;
-
-
     const { width, height } = ctx.canvas;
     ctx.clearRect(0, 0, width, height);
   }
