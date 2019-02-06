@@ -1,6 +1,5 @@
 # bg-canvases
 Tool for creating animated backgrounds on HTML 5 canvases.
-<<<<<<< HEAD
 # Contents
 1. [**Preparing**](#Preparing)
 1.1 [Installation](#Installation)
@@ -38,13 +37,10 @@ Tool for creating animated backgrounds on HTML 5 canvases.
 [![Edit Torch ](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/6zkxmq16qz)
 [![Rewind](https://media.giphy.com/media/2kTJcpU8a3tYYRd2CW/200w_d.gif)](https://2x9k4zqn3r.codesandbox.io/)
 [![Edit  Rewind](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/2x9k4zqn3r)
-=======
->>>>>>> 5619e72f43050b55353bbe302fe81308f9cd22f1
 ## Preparing
 #### Installation
 ```sh
 $ npm install bg-canvases
-<<<<<<< HEAD
 ```
 or
 ```sh
@@ -54,23 +50,11 @@ $ yarn add bg-canvases
 #### Basic HTML with HTML5 Canvases
 You need `HTML5 Canvas`. In this example we have 2 canvases:
 ```html
-=======
-
-or
-
-$ yarn add bg-canvases
-```
-#### Basic HTML 
->>>>>>> 5619e72f43050b55353bbe302fe81308f9cd22f1
 <!doctype html>
 <html lang="en">
    <head>
       <meta charset="utf-8">
-<<<<<<< HEAD
       <title>Demo</title>
-=======
-      <title>The HTML5 Herald</title>
->>>>>>> 5619e72f43050b55353bbe302fe81308f9cd22f1
       <meta name="description" content="The HTML5 Herald">
       <meta name="author" content="SitePoint">
       <link rel="stylesheet" href="css/styles.css?v=1.0">
@@ -81,7 +65,6 @@ $ yarn add bg-canvases
       <script src="js/scripts.js"></script>
    </body>
 </html>
-<<<<<<< HEAD
 ```
 #### Figures
 You want to draw figures on the canvas, so you must have classes for these figures. There are certain requirements for classes:
@@ -373,5 +356,3 @@ bg.drawFrame(0); // => First frame renders
 bg.drawFrame(999); // => Last frame renders
 ```
 
-=======
->>>>>>> 5619e72f43050b55353bbe302fe81308f9cd22f1
