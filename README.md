@@ -61,11 +61,16 @@ Tool for creating animated backgrounds on HTML 5 canvases.
 4. [**Demo**](#Demo)
 
 ## Demo
-[![Focus](https://media.giphy.com/media/ftdko2SkF087TJc0eD/200w_d.gif)](https://nk8kr6lo1j.codesandbox.io/) 
+[![Focus](https://media.giphy.com/media/ftdko2SkF087TJc0eD/200w_d.gif)](https://nk8kr6lo1j.codesandbox.io/)
+
 [![Edit Focus](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/nk8kr6lo1j)
+
 [![Torch](https://media.giphy.com/media/PhGuxEczcA9bTQkbm4/200w_d.gif)](https://6zkxmq16qz.codesandbox.io/)
+
 [![Edit Torch ](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/6zkxmq16qz)
+
 [![Rewind](https://media.giphy.com/media/2kTJcpU8a3tYYRd2CW/200w_d.gif)](https://2x9k4zqn3r.codesandbox.io/)
+
 [![Edit  Rewind](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/2x9k4zqn3r)
 ## Preparing
 #### Installation
