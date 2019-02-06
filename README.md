@@ -1,35 +1,65 @@
 # bg-canvases
 Tool for creating animated backgrounds on HTML 5 canvases.
 # Contents
+
 1. [**Preparing**](#Preparing)
-1.1 [Installation](#Installation)
-1.2 [Basic HTML with HTML5 Canvases](#Basic_HTML_with_HTML5_Canvases)
-1.3 [Figures](#Figures)
+
+   1.1 [Installation](#Installation)
+   
+   1.2 [Basic HTML with HTML5 Canvases](#Basic_HTML_with_HTML5_Canvases)
+   
+   1.3 [Figures](#Figures)
+
 2. [**Example**](#Example)
-2.1 [CSS](#CSS)
-2.2 [JS](#JS)
-2.3 [Result](#Result)
+
+   2.1 [CSS](#CSS)
+
+   2.2 [JS](#JS)
+
+   2.3 [Result](#Result)
+
 3. [**API**](#API)
-3.1. [**Setting and creating layers**](#Setting_and_creating_layers)
--- [Background](#new_Background())
--- [createLayer](#createLayer(ctx,_layerId,_figureCreator,_quantity,_animation))
--- [getLayer](#getLayer(layerId))
--- [removeLayer](#removeLayer(layerId))
-3.2 [**Animation and drawing**](#Animation_and_draing)
--- [setAnimation](#setAnimation(layerId,_animation))
--- [draw](#draw(layerId))
--- [animate](#animate(layerId))
--- [hide](#hide(layerId))
--- [show](#show(layerId))
--- [stop](#stop(layerId))
--- [start](#start(layerId))
-3.3 [**Functions**](#Functions)
--- [apply](#apply(func,_layerId))
--- [applyOnEach](#applyOnEach(func,_layerId))
-3.4 [**Pre-rendering frames**](#Pre-rendering_frames)
--- [preRender](#preRender(framesQuantity,_cb,_cbEvery,_draw,_save))
--- [drawFrame](#drawFrame(frame))
-3.5 [**Demo**](#Demo)
+
+   3.1. [**Setting and creating layers**](#Setting_and_creating_layers)
+   
+      * [Background](#_new_Background())
+      
+      * [createLayer](#createLayer(ctx,_layerId,_figureCreator,_quantity,_animation))
+      
+      * [getLayer](#getLayer(layerId))
+      
+      * [removeLayer](#removeLayer(layerId))
+      
+   3.2 [**Animation and drawing**](#Animation_and_draing)
+
+      * [setAnimation](#setAnimation(layerId,_animation))
+     
+      * [draw](#draw(layerId))
+      
+      * [animate](#animate(layerId))
+      
+      * [hide](#hide(layerId))
+      
+      * [show](#show(layerId))
+      
+      * [stop](#stop(layerId))
+      
+      * [start](#start(layerId))
+      
+   3.3 [**Functions**](#Functions)
+   
+      * [apply](#apply(func,_layerId))
+      
+      * [applyOnEach](#applyOnEach(func,_layerId))
+      
+   3.4 [**Pre-rendering frames**](#Pre-rendering_frames)
+   
+      * [preRender](#preRender(framesQuantity,_cb,_cbEvery,_draw,_save))
+      
+      * [drawFrame](#drawFrame(frame))
+      
+4. [**Demo**](#Demo)
+
 ## Demo
 [![Focus](https://media.giphy.com/media/ftdko2SkF087TJc0eD/200w_d.gif)](https://nk8kr6lo1j.codesandbox.io/) 
 [![Edit Focus](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/nk8kr6lo1j)
