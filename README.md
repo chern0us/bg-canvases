@@ -20,19 +20,19 @@ Tool for creating animated backgrounds on HTML 5 canvases.
 
 3. [**API**](#API)
 
-   3.1. [**Setting and creating layers**](#Setting_and_creating_layers)
+   3.1. [**Setting and creating layers**](#Setting-and-creating-layers)
    
       * [Background](#_new_Background())
       
-      * [createLayer](#createLayer(ctx,_layerId,_figureCreator,_quantity,_animation))
+      * [createLayer](#createLayer(ctx,-layerId,-figureCreator,-quantity,-animation))
       
       * [getLayer](#getLayer(layerId))
       
       * [removeLayer](#removeLayer(layerId))
       
-   3.2 [**Animation and drawing**](#Animation_and_draing)
+   3.2 [**Animation and drawing**](#Animation-and-draing)
 
-      * [setAnimation](#setAnimation(layerId,_animation))
+      * [setAnimation](#setAnimation(layerId,-animation))
      
       * [draw](#draw(layerId))
       
@@ -48,13 +48,13 @@ Tool for creating animated backgrounds on HTML 5 canvases.
       
    3.3 [**Functions**](#Functions)
    
-      * [apply](#apply(func,_layerId))
+      * [apply](#apply(func,-layerId))
       
-      * [applyOnEach](#applyOnEach(func,_layerId))
+      * [applyOnEach](#applyOnEach(func,-layerId))
       
    3.4 [**Pre-rendering frames**](#Pre-rendering_frames)
    
-      * [preRender](#preRender(framesQuantity,_cb,_cbEvery,_draw,_save))
+      * [preRender](#preRender(framesQuantity,-cb,-cbEvery,-draw,_save))
       
       * [drawFrame](#drawFrame(frame))
       
