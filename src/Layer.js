@@ -23,6 +23,7 @@ export default class Layer {
   // Make layer invisible
   hide() {
     this.visible = false;
+    this.clear();
     return this;
   }
 

@@ -1,6 +1,6 @@
 {
   "name": "bg-canvases",
-  "version": "1.1.4",
+  "version": "1.1.7",
   "description": "Tool for creating animated backgrounds on HTML5 canvases.",
   "main": "./dist/main.js",
   "scripts": {
