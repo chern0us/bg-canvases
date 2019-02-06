@@ -10,7 +10,7 @@ Tool for creating animated backgrounds on HTML 5 canvases.
    
    1.3 [Figures](#Figures)
 
-2. [**Example**](#example)
+2. [**Example**](#Example)
 
    2.1 [CSS](#CSS)
 
