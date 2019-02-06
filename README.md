@@ -10,7 +10,7 @@ Tool for creating animated backgrounds on HTML 5 canvases.
    
    1.3 [Figures](#Figures)
 
-2. [**Example**](#Example)
+2. [**Example**](#example)
 
    2.1 [CSS](#CSS)
 
@@ -20,43 +20,43 @@ Tool for creating animated backgrounds on HTML 5 canvases.
 
 3. [**API**](#API)
 
-   3.1. [**Setting and creating layers**](#Setting-and-creating-layers)
+   3.1. [**Setting and creating layers**](#setting-and-creating-layers)
    
-      * [Background](#_new_Background())
+      * [Background](#new-background)
       
-      * [createLayer](#createLayer(ctx,-layerId,-figureCreator,-quantity,-animation))
+      * [createLayer](#createlayerctx-layerid-figurecreator-quantity-animation)
       
-      * [getLayer](#getLayer(layerId))
+      * [getLayer](#getlayerlayerid)
       
-      * [removeLayer](#removeLayer(layerId))
+      * [removeLayer](#removelayerlayerId)
       
-   3.2 [**Animation and drawing**](#Animation-and-draing)
+   3.2 [**Animation and drawing**](#animation-and-drawing)
 
-      * [setAnimation](#setAnimation(layerId,-animation))
+      * [setAnimation](#setanimationlayerid-animation)
      
-      * [draw](#draw(layerId))
+      * [draw](#drawlayerid)
       
-      * [animate](#animate(layerId))
+      * [animate](#animatelayerid)
       
-      * [hide](#hide(layerId))
+      * [hide](#hidelayerid)
       
-      * [show](#show(layerId))
+      * [show](#showlayerid)
       
-      * [stop](#stop(layerId))
+      * [stop](#stoplayerid)
       
-      * [start](#start(layerId))
+      * [start](#startlayerid)
       
    3.3 [**Functions**](#Functions)
    
       * [apply](#apply(func,-layerId))
       
-      * [applyOnEach](#applyOnEach(func,-layerId))
+      * [applyOnEach](#applyoneachfunc-layerid)
       
-   3.4 [**Pre-rendering frames**](#Pre-rendering_frames)
+   3.4 [**Pre-rendering frames**](#pre-rendering-frames)
    
-      * [preRender](#preRender(framesQuantity,-cb,-cbEvery,-draw,_save))
+      * [preRender](#prerenderframesquantity-cb-cbevery-draw-save)
       
-      * [drawFrame](#drawFrame(frame))
+      * [drawFrame](#drawframeframe)
       
 4. [**Demo**](#Demo)
 
