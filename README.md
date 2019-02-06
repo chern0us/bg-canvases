@@ -240,8 +240,11 @@ bg.setAnimation('purple', yAnimation); // Changing purple animation t yAnimation
 ![Demo5](https://media.giphy.com/media/fMzwhY3qghw4u6u5O7/giphy.gif)
 
 ## API
+
 ### Setting and creating layers
+
 ##### new Background()
+
 Creates new bg-canvases object.
 
 ```js
