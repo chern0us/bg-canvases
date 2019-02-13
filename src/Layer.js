@@ -42,12 +42,17 @@ export default class Layer {
     this.animation = animation;
   }
 
+  // Sets context
+  setContext(ctx) {
+    this.ctx = ctx;
+  }
+
   // Call animation finction
   animate() {
     const {
       ctx, figures, animation, id,
     } = this;
-    forEach(figures, f => animation(f, figures, ctx, id));
+    forEach(figures, (f, i) => animation(f, i, figures, ctx, id));
     return this;
   }
 

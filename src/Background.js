@@ -28,10 +28,10 @@ export default class Background {
   constructor() {
     this.layers = {}; // Layers
     this.rendered = {}; // Rendered frames
+    this.createLayer = this.createLayer.bind(this);
   }
 
-  // Create figures layer
-  createLayer(ctx, layerId, figureCreator = noop, quantity = 1, animation = noop) {
+  createLayer(layerId, ctx, figureCreator = noop, quantity = 1, animation = noop) {
     let figures = {};
     for (let i = 0; i < quantity; i += 1) {
       figures = {
@@ -56,10 +56,23 @@ export default class Background {
     return this;
   }
 
-  // Set animation for layer
-  setAnimation(layerId, animation) {
-    // TODO add possibility to setAnimation to all layers
-    this.layers[layerId].setAnimation(animation);
+  // Set animation for layer or all layers
+  setAnimation(animation, layerId) {
+    if (layerId) {
+      this.layers[layerId].setAnimation(animation);
+    } else {
+      forEach(this.layers, layer => layer.setAnimation(animation));
+    }
+    return this;
+  }
+
+  // Set rendering context for layer or all layers
+  setContext(ctx, layerId) {
+    if (layerId) {
+      this.layers[layerId].setContext(ctx);
+    } else {
+      forEach(this.layers, layer => layer.setContext(ctx));
+    }
     return this;
   }
 
@@ -147,5 +160,9 @@ export default class Background {
     if (layerId) { this.layers[layerId].applyOnEach(func); return this; }
     forEach(this.layers, l => l.applyOnEach(func));
     return this;
+  }
+
+  get layers() {
+    return this.layers;
   }
 }
