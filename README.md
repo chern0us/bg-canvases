@@ -34,7 +34,7 @@ Tool for creating animated backgrounds on HTML 5 canvases.
 
       * [setAnimation](#setanimationlayerid-animation)
 
-      * [setContext](#setContext)
+      * [setContext](#setcontextctx-layerid)
      
       * [draw](#drawlayerid)
       
