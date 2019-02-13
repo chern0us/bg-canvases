@@ -50,7 +50,7 @@ Tool for creating animated backgrounds on HTML 5 canvases.
       
    3.3 [**Functions**](#Functions)
    
-      * [apply](#apply)
+      * [apply](#applyfunc-layerid)
       
       * [applyOnEach](#applyoneachfunc-layerid)
       
