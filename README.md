@@ -33,6 +33,8 @@ Tool for creating animated backgrounds on HTML 5 canvases.
    3.2 [**Animation and drawing**](#animation-and-drawing)
 
       * [setAnimation](#setanimationlayerid-animation)
+
+      * [setContext](#setContext)
      
       * [draw](#drawlayerid)
       
@@ -48,7 +50,7 @@ Tool for creating animated backgrounds on HTML 5 canvases.
       
    3.3 [**Functions**](#Functions)
    
-      * [apply](#apply(func,-layerId))
+      * [apply](#apply)
       
       * [applyOnEach](#applyoneachfunc-layerid)
       
@@ -255,7 +257,7 @@ Creates new bg-canvases object.
 ```js
 const bg = new Background();
 ```
-##### createLayer(ctx, layerId, figureCreator, quantity, animation)
+##### createLayer(layerId, ctx, figureCreator, quantity, animation)
 Creates instance of Layer inside Background.
 Parameters:
 * `ctx` -- Canvas drawing context
@@ -265,16 +267,16 @@ Parameters:
 * `animation(f, figures, ctx, layerId)` -- Animation function that will be called with every figures in layer [`f` - figure, `figures` - figures on layer, `ctx` - context, `layerId` -layer id]
 
 ```js
-bg.createLayer(ctx, 'myLayer', (i) => new Figure(i)); 
+bg.createLayer('myLayer', ctx, (i) => new Figure(i)); 
 /* Creates layer 'myLayer' with 1 figure Figure and without animation' */
 
-bg.createLayer(ctx, 'anotherLayer', (i) => new AnotherFigure(i), 20);
+bg.createLayer('anotherLayer', ctx, (i) => new AnotherFigure(i), 20);
 /* Creates layer 'anotherLayer' with 20 AnotherFigure's and without animation */
 
-const myAnimation = (f, figures, ctx, id) => {
+const myAnimation = (f, i, figures, ctx, id) => {
     // Do something with figure f 
 };
-bg.createLayer(ctx, 'animatedLayer', (i) => new Figure(i), 20, myAnimation);
+bg.createLayer('animatedLayer', ctx, (i) => new Figure(i), 20, myAnimation);
 /* Creates layer 'animatedLayer' with 20 Figure's and animation */
 ```
 ##### getLayer(layerId)
@@ -291,12 +293,21 @@ bg.removeLayer('animatedLayer');
 bg.getLayer('animatedLayer'); // => undefined
 ```
 ### Animation and drawing
-##### setAnimation(layerId, animation)
+##### setAnimation(animation, layerId)
 Sets animation function.
 ```javascript
-bg.setAnimation('myLayer', myAnimation);
+bg.setAnimation(myAnimation, 'myLayer');
 // or 
 // bg.getLayer('myLayer').setAnimation(myAnimation);
+bg.setAnimation(myAnimation); // Setting myAnimation to all layers
+```
+##### setContext(ctx, layerId)
+Sets rendering context
+```javascript
+bg.setContext(ctx, 'myLayer');
+// or 
+// bg.getLayer('myLayer').setContex(ctx);
+bg.setContext(ctx); // Setting ctx to all layers
 ```
 ##### draw(layerId)
 Draws all visible figures, an all visible layers, on their contexts, or layer with selected id;
