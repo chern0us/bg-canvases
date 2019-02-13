@@ -162,7 +162,4 @@ export default class Background {
     return this;
   }
 
-  get layers() {
-    return this.layers;
-  }
 }
