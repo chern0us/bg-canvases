@@ -34,9 +34,12 @@ export default class Background {
   createLayer(layerId, ctx, figureCreator = noop, quantity = 1, animation = noop) {
     let figures = {};
     for (let i = 0; i < quantity; i += 1) {
-      figures = {
-        ...figures, [i]: figureCreator(i, layerId, quantity),
-      };
+      const figure = figureCreator(i, layerId, quantity);
+      if (figure) {
+        figures = {
+          ...figures, [i]: figure,
+        };
+      }
     }
     this.layers = {
       ...this.layers,
@@ -161,5 +164,4 @@ export default class Background {
     forEach(this.layers, l => l.applyOnEach(func));
     return this;
   }
-
 }

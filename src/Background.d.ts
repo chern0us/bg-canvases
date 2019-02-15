@@ -22,7 +22,7 @@ declare class Background {
      * Creates figures layer. Returns Layer.
      * @param layerId Layer id. Layer with same id will be overwritten.
      * @param ctx CanvasRenderingContext2D
-     * @param figureCreator Function (i: number, layerId: string, quantity: number) => Figure
+     * @param figureCreator Function (i: number, layerId: string, quantity: number) => Figure || null
      * @param quantity Figures quantity: Optional (Default 1)
      * @param animation Animation Function (f: object, i: number, figures: object, ctx: CanvasRenderingContext2D, id: any) => void;
      * ctx: CanvasRenderingContext2D, id: any);
