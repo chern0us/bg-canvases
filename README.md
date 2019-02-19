@@ -48,7 +48,7 @@ Tool for creating animated backgrounds on HTML 5 canvases.
       
       * [start](#startlayerid)
       
-      * [getFigure](#)
+      * [getFigure](#getfigurelayerid-figureid)
       
    3.3 [**Functions**](#Functions)
    
