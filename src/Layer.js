@@ -1,5 +1,6 @@
 // Useful functions from Lodash
 import forEach from 'lodash/forEach';
+import find from 'lodash/find';
 import cloneDeep from 'lodash/cloneDeep';
 // import omit from 'lodash/omit';
 
@@ -75,6 +76,11 @@ export default class Layer {
       // If figure is visible
       if (figure.visible) { figure.draw(this.ctx); }
     });
+  }
+
+  // Find figure by id
+  getFigure(id) {
+    return find(this.figures, figure => figure.id === id);
   }
 
   // Request frames for rendering

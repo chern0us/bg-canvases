@@ -48,6 +48,8 @@ Tool for creating animated backgrounds on HTML 5 canvases.
       
       * [start](#startlayerid)
       
+      * [getFigure](#)
+      
    3.3 [**Functions**](#Functions)
    
       * [apply](#applyfunc-layerid)
@@ -281,7 +283,6 @@ bg.createLayer('animatedLayer', ctx, (i) => new Figure(i), 20, myAnimation);
 ```
 ##### getLayer(layerId)
 Returns layer.
-
 ```js
 bg.getLayer('animatedLayer'); // => Returns instance of Layer with id 'animatedLayer'
 ```
@@ -293,6 +294,7 @@ bg.removeLayer('animatedLayer');
 bg.getLayer('animatedLayer'); // => undefined
 ```
 ### Animation and drawing
+
 ##### setAnimation(animation, layerId)
 Sets animation function.
 ```javascript
@@ -350,6 +352,13 @@ Make layer with selected id active.
 ```js
 bg.start('myLayer'); // 'myLayer' is now inactive and will be animated
 bg.start(); // All layers is now active
+```
+##### getFigure(layerId, figureId)
+Returns figure with this id;
+```javascript
+bg.getFigure('myLayer', 'myFigure'); // => Figure{ ..., id: 'myFigure' };
+// or
+//bg.getLayer('myLayer').getFigure('myFigure');
 ```
 ### Functions
 ##### apply(func, layerId)

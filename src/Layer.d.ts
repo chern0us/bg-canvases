@@ -45,6 +45,11 @@ declare class Layer {
     animate(): Layer;
 
     /**
+     * Returns figure with this id
+     * @param id Figure's is;
+     */
+    getFigure(id: string): Object;
+    /**
      * Applying function to each figure in layer
      * @param func (figure: object, i: number) => void;
      */

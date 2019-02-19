@@ -36,6 +36,12 @@ declare class Background {
     getLayer(layerId: string): Layer;
 
     /**
+     * Returns Figure with this id.
+     * @param figureId Figure id
+     * @param layerId Layer id
+     */
+    getFigure(layerId: string, figureId: string): Object;
+    /**
      * Sets animation function to specific layer or to all layers. Returns itself.
      * @param animation Animation Function (f: object, figures: object,
      * ctx: CanvasRenderingContext2D, id: any);

@@ -53,6 +53,11 @@ export default class Background {
     return this.layers[layerId];
   }
 
+  // Return figure by id
+  getFigure(layerId, figureId) {
+    return this.layers[layerId].getFigure(figureId);
+  }
+
   // Removes layer
   removeLayer(layerId) {
     this.layers = omit(this.layers, layerId);
