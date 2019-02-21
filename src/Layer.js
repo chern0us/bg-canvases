@@ -31,21 +31,25 @@ export default class Layer {
   // Make layer active
   start() {
     this.active = true;
+    return this;
   }
 
   // Make layer inactive
   stop() {
     this.active = false;
+    return this;
   }
 
   // Set animation function
   setAnimation(animation) {
     this.animation = animation;
+    return this;
   }
 
   // Sets context
   setContext(ctx) {
     this.ctx = ctx;
+    return this;
   }
 
   // Call animation finction
@@ -60,6 +64,7 @@ export default class Layer {
   // Applying function to each figure in layer
   applyOnEach(func) {
     forEach(this.figures, func);
+    return this;
   }
 
   // Applying function to all figures
@@ -68,6 +73,7 @@ export default class Layer {
       ctx, figures, id,
     } = this;
     func(figures, ctx, id);
+    return this;
   }
 
   // Draw layer
@@ -76,6 +82,7 @@ export default class Layer {
       // If figure is visible
       if (figure.visible) { figure.draw(this.ctx); }
     });
+    return this;
   }
 
   // Find figure by id
@@ -96,6 +103,7 @@ export default class Layer {
       if (timeout) {
         clearTimeout(timeout);
       }
+      return this;
     };
     // Render next
     const doStep = () => {
@@ -141,7 +149,10 @@ export default class Layer {
   // Clear canvas
   clear() {
     const { ctx } = this;
-    const { width, height } = ctx.canvas;
-    ctx.clearRect(0, 0, width, height);
+    if (ctx) {
+      const { width, height } = ctx.canvas;
+      ctx.clearRect(0, 0, width, height);
+    }
+    return this;
   }
 }

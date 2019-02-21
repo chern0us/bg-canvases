@@ -10,34 +10,34 @@ declare class Layer {
     /**
      * Make layer visible.
      */
-    show(): void;
+    show(): Layer;
 
     /**
      * Make layer invisible.
      */
-    hide(): void;
+    hide(): Layer;
 
     /**
      * Make layer active.
      */
-    start(): void;
+    start(): Layer;
 
     /**
      * Make layer inactive.
      */
-    stop(): void;
+    stop(): Layer;
 
     /**
      * Set animation function to layer.
      * @param animation (f: object, i: number, figures: object, ctx: CanvasRenderingContext2D, id: any) => void;
      */
-    setAnimation(animation: animation): void;
+    setAnimation(animation: animation): Layer;
 
     /**
      * Set context to layer .
      * @param ctx CanvasRenderingContext2D
      */
-    setContext(ctx: CanvasRenderingContext2D): void;
+    setContext(ctx: CanvasRenderingContext2D): Layer;
 
     /**
      * Animate layer.
@@ -53,18 +53,18 @@ declare class Layer {
      * Applying function to each figure in layer
      * @param func (figure: object, i: number) => void;
      */
-    applyOnEach(func: each): void;
+    applyOnEach(func: each): Layer;
 
     /**
      * Applying function to all figures
      * @param func (figures: object, ctx: CanvasRenderingContext2D, id: any) => void;
      */
-    apply(func: simpleApply): void;
+    apply(func: simpleApply): Layer;
 
     /**
      * Draw layer.
      */
-    draw(): void;
+    draw(): Layer;
 
 }
 

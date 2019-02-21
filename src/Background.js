@@ -117,7 +117,6 @@ export default class Background {
     const buffers = this.rendered;
     const cleared = new Set();
     forEach(buffers, stock => reDraw(cleared, stock[frame]));
-    return this;
   }
 
   // Draw every layer
