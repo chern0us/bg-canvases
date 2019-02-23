@@ -78,16 +78,16 @@ export default class Background {
   setContext(ctx, layerId) {
     if (layerId) {
       this.layers[layerId].setContext(ctx);
-    } else {
-      forEach(this.layers, layer => layer.setContext(ctx));
+      return this.layers[layerId];
     }
+    forEach(this.layers, layer => layer.setContext(ctx));
     return this;
   }
 
   // Calls animation function for every layer
   animate(layerId) {
-    if (layerId) { this.layers[layerId].animate(); return this; }
-    forEach(this.layers, (layer) => {
+    if (layerId) { this.layers[layerId].animate(); return this.layers[layerId]; }
+    forEach(this.layers, async (layer) => {
       if (layer.active) layer.animate();
     });
     return this;
@@ -122,49 +122,49 @@ export default class Background {
   // Draw every layer
   draw(layerId) {
     const cleared = new Set();
-    if (layerId) { reDraw(cleared, this.layers[layerId]); return this; }
+    if (layerId) { reDraw(cleared, this.layers[layerId]); return this.layers[layerId]; }
     forEach(this.layers, layer => reDraw(cleared, layer));
     return this;
   }
 
   // Hide all or layer with id
   hide(layerId) {
-    if (layerId) { this.layers[layerId].hide(); return this; }
+    if (layerId) { this.layers[layerId].hide(); return this.layers[layerId]; }
     forEach(this.layers, l => l.hide());
     return this;
   }
 
   // Show all or layer with id
   show(layerId) {
-    if (layerId) { this.layers[layerId].show(); return this; }
+    if (layerId) { this.layers[layerId].show(); return this.layers[layerId]; }
     forEach(this.layers, l => l.show());
     return this;
   }
 
   // Activate all or layer with id
   start(layerId) {
-    if (layerId) { this.layers[layerId].start(); return this; }
+    if (layerId) { this.layers[layerId].start(); return this.layers[layerId]; }
     forEach(this.layers, l => l.start());
     return this;
   }
 
   // Deactivate all or layer with id
   stop(layerId) {
-    if (layerId) { this.layers[layerId].stop(); return this; }
+    if (layerId) { this.layers[layerId].stop(); return this.layers[layerId]; }
     forEach(this.layers, l => l.stop());
     return this;
   }
 
   // Apply function to all figures an all layers or layer with Id;
   apply(func, layerId) {
-    if (layerId) { this.layers[layerId].apply(func); return this; }
+    if (layerId) { this.layers[layerId].apply(func); return this.layers[layerId]; }
     forEach(this.layers, l => l.apply(func));
     return this;
   }
 
   // Apply function to each figures an all layers or layer with Id;
   applyOnEach(func, layerId) {
-    if (layerId) { this.layers[layerId].applyOnEach(func); return this; }
+    if (layerId) { this.layers[layerId].applyOnEach(func); return this.layers[layerId]; }
     forEach(this.layers, l => l.applyOnEach(func));
     return this;
   }
