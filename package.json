@@ -5,8 +5,7 @@
   "main": "./src/Background.js",
   "types": "./src/Background.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel src -d dist"
+    "test": "jest"
   },
   "keywords": [
     "canvas",
@@ -18,6 +17,15 @@
   "author": "belousnikita",
   "license": "ISC",
   "dependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "babel-jest": "^24.5.0",
+    "eslint": "^5.15.3",
+    "eslint-plugin-jest": "^22.4.1",
     "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "canvas": "^2.4.1",
+    "jest": "^24.5.0"
   }
 }
